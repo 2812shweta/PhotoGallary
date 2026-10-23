@@ -1,19 +1,87 @@
-# React + Vite
+# Celebrare Photo Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive photo gallery built with React, Vite, and Tailwind CSS. Browse photos, search by author, and save your favourite photos.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Fetches 30 photos from the Picsum Photos API.
+- Responsive gallery layout for mobile, tablet, and desktop.
+- Search photos by author name in real time.
+- Add or remove photos from favourites.
+- Favourites persist using localStorage.
+- Custom React hook for fetching photos.
+- Loading spinner and error handling.
+- Uses React hooks including useState, useEffect, useReducer, useCallback, and useMemo.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React
+- Vite
+- Tailwind CSS
+- JavaScript
+- Picsum Photos API
+- Browser localStorage
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/2812shweta/PhotoGallary.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd PhotoGallary
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL shown in your terminal.
+
+## API
+
+Photos are fetched from:
+
+https://picsum.photos/v2/list?limit=30
+
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── Gallery.jsx
+│   ├── PhotoCard.jsx
+│   └── SearchBar.jsx
+├── hooks/
+│   └── useFetchPhotos.js
+├── reducer/
+│   └── favouritesReducer.js
+├── App.jsx
+├── index.css
+└── main.jsx
+```
+
+## Author
+
+Shweta Singh
+
+GitHub: [2812shweta](https://github.com/2812shweta)
